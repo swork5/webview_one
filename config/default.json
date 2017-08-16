@@ -1,0 +1,6 @@
+{
+    "appSecret": "d2168d751b333275fde1c71dabfa1b27",
+    "pageAccessToken": "EAAWeGYFgduoBAPhwcRVFdBpDfmbcfTRuMJFq5FAruZC8RSVpb641vxqJ6XitsHDlgX2au5IPKLhQcClJaqAhJ9uqGjvfQ0ZCsTYZAbuYJQKb0ZBItjUhEu7g1h2vnyDveI3ZBnjHiCOPkLbEm3vO2O2elTg3ktuNk22Pry6jcvAZDZDEAAWeGYFgduoBAPhwcRVFdBpDfmbcfTRuMJFq5FAruZC8RSVpb641vxqJ6XitsHDlgX2au5IPKLhQcClJaqAhJ9uqGjvfQ0ZCsTYZAbuYJQKb0ZBItjUhEu7g1h2vnyDveI3ZBnjHiCOPkLbEm3vO2O2elTg3ktuNk22Pry6jcvAZDZD",
+    "validationToken": "vw-one-initial",
+    "serverURL": "https://webview-one.herokuapp.com/"
+}
