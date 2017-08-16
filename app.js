@@ -203,7 +203,7 @@ function receivedAuthentication(event) {
 
 /*
  * Message Event
- *
+ * Sample Comment
  * This event is called when a message is sent to your page. The 'message' 
  * object format can vary depending on the kind of message that was received.
  * Read more at https://developers.facebook.com/docs/messenger-platform/webhook-reference/message-received
