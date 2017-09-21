@@ -17,7 +17,7 @@ const
   express = require('express'),
   https = require('https'),  
   request = require('request');
-  AWS=require('aws-sdk');
+  //AWS=require('aws-sdk');
 
 var app = express();
 app.set('port', process.env.PORT || 5000);
@@ -221,6 +221,7 @@ function receivedMessage(event) {
   var recipientID = event.recipient.id;
   var timeOfMessage = event.timestamp;
   var message = event.message;
+  var docClient = new AWS.DynamoDB.DocumentClient();
 
   const dynamoParams = {
     TableName: "Logs",
@@ -232,7 +233,7 @@ function receivedMessage(event) {
     },
   };
 
-  dynamoDb.put(dynamoParams, (error) => {
+  docClient.put(dynamoParams, (error) => {
       if (error) {
         console.error(error);
       }
