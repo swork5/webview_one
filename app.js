@@ -17,6 +17,7 @@ const
   express = require('express'),
   https = require('https'),  
   request = require('request');
+  AWS=require('aws-sdk');
 
 var app = express();
 app.set('port', process.env.PORT || 5000);
@@ -220,6 +221,22 @@ function receivedMessage(event) {
   var recipientID = event.recipient.id;
   var timeOfMessage = event.timestamp;
   var message = event.message;
+
+  const dynamoParams = {
+    TableName: "Logs",
+    Item: {
+      id: event.timestamp.toString(),
+      senderId: senderID,
+      recipentId: recipientID,
+      contextData:event.message
+    },
+  };
+
+  dynamoDb.put(dynamoParams, (error) => {
+      if (error) {
+        console.error(error);
+      }
+  });
 
   console.log("Received message for user %d and page %d at %d with message:", 
     senderID, recipientID, timeOfMessage);
